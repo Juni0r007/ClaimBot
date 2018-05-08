@@ -15,7 +15,7 @@ curl_setopt_array($curl, array(
       ));
 $resp = curl_exec($curl);                                   curl_close($curl);
 $div = explode('<div class="alert alert-success">', $resp);
-$div2 = explode('.</div><script type="text/javascript">gtag(', $div[1]);
+$div2 = explode('.</div>', $div[1]);
 echo $div2[0]."\n";
         sleep($tiempo); 
 	}
